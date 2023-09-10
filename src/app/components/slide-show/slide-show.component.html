@@ -1,0 +1,27 @@
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" *ngFor="let movie of _moviesSlide" [style.background-size]="'cover'"
+            [style.background-image]="movie.backdrop_path && movie.backdrop_path.length > 0 ? 'url(https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + movie.backdrop_path + ')' : 'url(./assets/no-image.jpg)'">
+
+            <!-- [ngStyle]="{'background-size': 'cover', 'background-image': movie.backdrop_path && movie.backdrop_path.length > 0 ? 'url(https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + movie.backdrop_path + ')' : 'url(./assets/no-image.jpg)'}"> -->
+
+            <div class="movie-description">
+                <h3>{{movie.title}}</h3>
+                <p>{{movie.overview | texts: 330}}</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+</div>

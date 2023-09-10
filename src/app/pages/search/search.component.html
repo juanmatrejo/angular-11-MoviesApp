@@ -1,0 +1,13 @@
+<h1>Search results</h1>
+<h5> {{_searchValue}} </h5>
+<hr>
+
+<div class="row" *ngIf="_moviesSlide.length > 0">
+    <div class="col">
+        <app-slide-show [_moviesSlide]="_moviesSlide"></app-slide-show>
+    </div>
+</div>
+
+<h1 class="mt-3">Movies</h1>
+
+<app-movie-poster-grid [_movies]="_movies" *ngIf="_movies.length > 0"></app-movie-poster-grid>
