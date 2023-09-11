@@ -4,12 +4,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
-            <div class="d-flex">
-                <input #txSearch (keyup.enter)="searchFilm(txSearch.value)" class="form-control me-2" type="search"
+            <form id="fSearch" class="form-inline my-2 my-lg-0 mt-4" (ngSubmit)="searchFilm(txSearchS.value)">
+                <div class="d-flex">
+                    <input #txSearchS class="form-control mr-sm-2 me-2" type="search" placeholder="Search movie"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" form="fSearch" type="submit">Search</button>
+                </div>>
+            </form>
+            <!-- <div class="d-flex">
+                <input #txSearchK (keyup.enter)="searchFilm(txSearchK.value)" class="form-control me-2" type="search"
                     placeholder="Search movie" aria-label="Search">
-                <button (click)="searchFilm(txSearch.value)" class="btn btn-outline-success"
+                <button (click)="searchFilm(txSearchK.value)" class="btn btn-outline-success"
                     type="button">Search</button>
-            </div>
+            </div> -->
         </div>
     </div>
 </nav>

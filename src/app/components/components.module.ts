@@ -7,6 +7,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { MoviePosterGridComponent } from './movie-poster-grid/movie-poster-grid.component';
 import { RatingModule } from 'ng-starrating';
 import { CastSlideShowComponent } from './cast-slide-show/cast-slide-show.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -19,7 +20,8 @@ import { CastSlideShowComponent } from './cast-slide-show/cast-slide-show.compon
 		CommonModule,
 		RouterModule,
 		PipesModule,
-		RatingModule
+		RatingModule,
+		FormsModule
 	],
 	exports: [
 		NavbarComponent,

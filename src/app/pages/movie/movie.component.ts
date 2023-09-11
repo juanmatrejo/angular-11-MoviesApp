@@ -30,8 +30,6 @@ export class MovieComponent implements OnInit {
 
 		}).subscribe(response => {
 
-			console.log(response);
-
 			if (!response) {
 
 				this._router.navigateByUrl('/home');

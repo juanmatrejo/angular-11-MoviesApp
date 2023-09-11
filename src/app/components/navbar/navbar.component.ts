@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
 	selector: 'app-navbar',
@@ -17,3 +18,4 @@ export class NavbarComponent {
 		this._router.navigate(['/search', film]);
 	}
 }
+

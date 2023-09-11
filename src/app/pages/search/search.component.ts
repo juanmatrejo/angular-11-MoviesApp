@@ -40,6 +40,7 @@ export class SearchComponent implements OnInit, OnDestroy {
 
 		this._activatedRoute.params.subscribe((params: any) => {
 
+			this._movieService.resetPage();
 			this._searchValue = params.value;
 
 			this._movieService.search(this._searchValue).subscribe(response => {
